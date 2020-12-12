@@ -46,8 +46,13 @@
         }
         
         button {
-            border: #b9b4c7 2px solid;
+            /* border: #b9b4c7 2px solid; */
+            border: none;
             background-color: transparent;
+        }
+        
+        [type="button"]:focus {
+            outline: none;
         }
         
         i {
@@ -77,8 +82,9 @@
                 <h3 class="my-4">Sonja</h3>
                 <img src="cat2.jpg" alt="karvane">
                 <div>
-                    <button id="clickme" class="mt-3">
-                    <i class="fa fa-thumbs-up" aria-hidden="true"></i> 2477</button>
+                    <button type="button" class="mt-3" onclick="addLike()">                
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                    <button type="button" class="mt-3" id="countLikes">0</button>
                 </div>
                 <div class="mx-4">
                     <p class="mt-2">Sonja on noor emane kiisu, kes pole ilmselt olnud kodukass. Tänavakassi pojana sündinud ja imekombel suureks sirgunud Sonja ilmus koos oma poegadega Morna linnavalitsuse ette. Kassipere varjus parklas seisvate autode all ja lippas
@@ -90,8 +96,9 @@
                 <h3 class="my-4">Sander</h3>
                 <img src="cat1.jpg" alt="värviline">
                 <div>
-                    <button id="clickme2" class="mt-3">
-                    <i class="fa fa-thumbs-up" aria-hidden="true"></i> 2477</button>
+                    <button type="button" class="mt-3" onclick="addLike2()">                
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                    <button type="button" class="mt-3" id="countLikes2">0</button>
                 </div>
                 <div class="mx-4">
                     <p class="mt-2">See ülisõbralik ja usaldav nurruja on Sander. Sellise nime panid talle head inimesed, kes õnnetut ja räsitud kassi Morna tänavatel hulkumas nägid. Nad ehitasid talle väikese peavarju, käisid teda söötmas ning lohutamas, kuid kuna kiisu
@@ -108,16 +115,17 @@
 
 </html>
 <script>
-    var button = document.getElementById("clickme"),
-        count = 0;
-    button.onclick = function() {
-        count += 1;
-        button.innerHTML = "Like: " + count;
+    var clicks = 0;
+
+    function addLike() {
+        clicks += 1;
+        document.getElementById("countLikes").innerHTML = clicks;
     };
-    var button2 = document.getElementById("clickme2"),
-        count2 = 0;
-    button2.onclick = function() {
-        count2 += 1;
-        button2.innerHTML = "Like: " + count2;
+
+    var clicks2 = 0;
+
+    function addLike2() {
+        clicks2 += 1;
+        document.getElementById("countLikes2").innerHTML = clicks2;
     };
 </script>
