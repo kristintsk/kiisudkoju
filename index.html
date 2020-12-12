@@ -36,17 +36,18 @@
             color: #1d1b20;
         }
         
-        .col-md-6 img {
-            width: 35vw;
-            border: #b9b4c7 2px solid;
-        }
-        
         img {
+            width: 80%;
             box-shadow: 0px 0px 10px 10px #cbc6da;
         }
         
+        @media screen {
+            img {
+                width: 65%;
+            }
+        }
+        
         button {
-            /* border: #b9b4c7 2px solid; */
             border: none;
             background-color: transparent;
         }
@@ -78,9 +79,9 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 mb-3 mt-3">
+            <div class="col-12 col-md-6 mb-3 mt-3">
                 <h3 class="my-4">Sonja</h3>
-                <img src="cat2.jpg" alt="karvane">
+                <img src="cat2.jpg" alt="must-valge kiisu">
                 <div>
                     <button type="button" class="mt-3" onclick="addLike()">                
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
@@ -91,10 +92,12 @@
                         ringi ohtlikul sõiduteel, mistõttu kohalikud nende pärast suurt muret tundsid. Tänaseks on Sonja sotsialiseeritud, kiibitud, vaktsineeritud ja steriliseeritud ning ta on valmis päris oma koju minema.</p>
                     <div class="small">Tundsid selles kiisus ära oma kaaslase?<br>Saada<a href="mailto:info@kiisudkoju.eu"> e-kiri kiisule</a> ja saage lähemalt tuttavaks</div>
                 </div>
+                <hr class="d-block d-sm-block d-md-none">
             </div>
+            <hr class="d-block d-sm-none">
             <div class="col-md-6 mb-3 mt-3">
                 <h3 class="my-4">Sander</h3>
-                <img src="cat1.jpg" alt="värviline">
+                <img src="cat1.jpg" alt="kolmevärviline kiisu">
                 <div>
                     <button type="button" class="mt-3" onclick="addLike2()">                
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
